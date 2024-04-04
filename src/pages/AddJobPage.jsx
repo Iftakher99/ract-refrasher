@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line react/prop-types
 const AddJobPage = ({ addJobSubmit }) => {
   const [title, setTitle] = useState('');
   const [type, setType] = useState('Full-Time');
@@ -28,7 +29,7 @@ const AddJobPage = ({ addJobSubmit }) => {
       },
     };
     addJobSubmit(newJob);
-    return navigate('/jobs');
+    return navigate('/job');
   };
   return (
     <section className="bg-indigo-50">
